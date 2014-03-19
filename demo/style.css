@@ -62,9 +62,7 @@ body {
 }
 
 .battery {
-/*  position: absolute;*/
   width: 200px;
-/*  z-index: 5;*/
 }
 
 .battery-cap, .battery-body {
