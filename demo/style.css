@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #003b85;
+
+}
+
+#wave {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(#FFF, #FFF), url('wave.svg');
+  background-size: 253px 100px, 253px 200px;
+  background-repeat: repeat-x;
+  background-position: bottom, bottom 100px left;
+
+  animation: wave-animation 5s infinite linear;
+}
+
+.wave-cover {
+  position: absolute;
+  z-index: 2;
+
+  background: rgba(0, 59, 133, 0.7);
+}
+  .wave-cover-left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(50% - 100px);
+  }
+  .wave-cover-right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(50% - 100px);
+  }
+  .wave-cover-bottom {
+    bottom: 0;
+    left: calc(50% - 100px);
+    right: calc(50% - 100px);
+    top: calc(50% + 205px);
+  }
+  .wave-cover-center {
+    width: 142px;
+    height: 281px;
+    top: calc(50% - 124px);
+    left: calc(50% - 71px);
+    background: none;
+    border: 5px solid rgba(0, 59, 133, 0.7);
+    box-sizing: border-box;
+  }
+
+@keyframes wave-animation {
+  0% { background-position: bottom, bottom 100px left; }
+  100% { background-position: bottom, bottom 100px left 253px; }
+}
+
+.battery {
+/*  position: absolute;*/
+  width: 200px;
+/*  z-index: 5;*/
+}
+
+.battery-cap, .battery-body {
+  fill: #FFF;
+  fill-opacity: 0.2;
+}
