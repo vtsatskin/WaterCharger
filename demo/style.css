@@ -4,20 +4,20 @@ body {
   justify-content: center;
   min-height: 100vh;
   background: #003b85;
-
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 #wave {
   position: absolute;
-  top: 0;
+  top: calc(50%);
   bottom: 0;
   left: 0;
   right: 0;
 
   background: linear-gradient(#FFF, #FFF), url('wave.svg');
-  background-size: 253px 100px, 253px 200px;
+  background-size: 100% calc(100% - 74px), 253px 75px;
   background-repeat: repeat-x;
-  background-position: bottom, bottom 100px left;
+  background-position: bottom, top;
 
   animation: wave-animation 5s infinite linear;
 }
@@ -57,8 +57,8 @@ body {
   }
 
 @keyframes wave-animation {
-  0% { background-position: bottom, bottom 100px left; }
-  100% { background-position: bottom, bottom 100px left 253px; }
+  0% { background-position: bottom, top left 0px; }
+  100% { background-position: bottom, top left 253px; }
 }
 
 .battery {
@@ -69,3 +69,14 @@ body {
   fill: #FFF;
   fill-opacity: 0.2;
 }
+
+#controls {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 3;
+  color: #FFF;
+}
+  #battery-percentage {
+    width: 40px;
+  }
